@@ -13,11 +13,10 @@ class MomsController < ApplicationController
 
   def create
     @mom = Mom.new(strong_param)
-    if @mom.save
-      redirect_to team_path(@mom)
-    else
-      render :new
-    end
+    @mom.save
+    # to do : add redirect after mom creation to correct view path
+    # redirect_to team_path(@mom)
+    # render :new
   end
 
   def update
@@ -35,6 +34,6 @@ class MomsController < ApplicationController
   private
 
   def strong_param
-    params.require(:team).permit(:name, :address)
+    params.require(:mom).permit(:name, :last_name, :location, :price, :owner_id)
   end
 end
