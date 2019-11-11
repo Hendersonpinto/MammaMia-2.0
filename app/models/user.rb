@@ -8,7 +8,6 @@ class User < ApplicationRecord
   validates :last_name, presence:true
   validates :location, presence:true
   validates :email, presence:true, format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :photo, presence:true
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end
