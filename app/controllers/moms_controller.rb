@@ -34,6 +34,6 @@ class MomsController < ApplicationController
   private
 
   def strong_param
-    params.require(:mom).permit(:name, :last_name, :location, :price, :owner_id)
+    params.require(:mom).permit(:name, :last_name, :location, :price, :owner)
   end
 end
