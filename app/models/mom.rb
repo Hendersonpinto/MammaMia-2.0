@@ -1,7 +1,7 @@
-class User < ApplicationRecord
+class Mom < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  has_one :mom, foreign_key: 'owner_id'
+  belongs_to :owner, class_name: 'User'
   has_many :bookings, dependent: :destroy
   has_many :moms, through: :bookings
   validates :name, uniqueness:true, presence:true
