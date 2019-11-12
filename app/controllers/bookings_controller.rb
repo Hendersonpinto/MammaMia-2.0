@@ -13,7 +13,17 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(strong_param)
-    @booking.save
+    @mom = Mom.find(params[:mom_id])
+    @booking.mom = @mom
+    @booking.renter = current_user
+    @booking.price = @mom.price
+    if @booking.save
+      redirect_to mom_path(@mom)
+    else
+      raise
+      render template: "moms/show"
+    end
+
     # to do : add redirect after booking creation to correct view path
     # redirect_to team_path(@booking)
     # render :new
@@ -34,6 +44,6 @@ class BookingsController < ApplicationController
   private
 
   def strong_param
-    params.require(:booking).permit(:renter, :mom, :price)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
