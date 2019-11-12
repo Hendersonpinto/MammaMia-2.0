@@ -4,10 +4,9 @@ class User < ApplicationRecord
   has_one :mom, foreign_key: 'owner_id'
   has_many :bookings, dependent: :destroy
   has_many :moms, through: :bookings
-  validates :name, uniqueness:true, presence:true
-  validates :last_name, presence:true
-  validates :location, presence:true
-  validates :email, presence:true, format: { with: URI::MailTo::EMAIL_REGEXP }
+  # validates :name, uniqueness: true, presence: true
+  # validates :last_name, presence: true
+  # validates :location, presence: true
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end

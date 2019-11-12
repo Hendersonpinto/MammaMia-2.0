@@ -16,15 +16,6 @@ ActiveRecord::Schema.define(version: 2019_11_11_170429) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-<<<<<<< HEAD
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "moms", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-=======
     t.bigint "renter_id"
     t.bigint "mom_id"
     t.integer "price"
@@ -43,7 +34,6 @@ ActiveRecord::Schema.define(version: 2019_11_11_170429) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["owner_id"], name: "index_moms_on_owner_id"
->>>>>>> 6f9ae043d6df3d3d3cfcdadc1782fd78b721096f
   end
 
   create_table "users", force: :cascade do |t|
