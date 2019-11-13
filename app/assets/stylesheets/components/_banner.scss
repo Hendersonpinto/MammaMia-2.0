@@ -1,5 +1,6 @@
 .banner {
  background-size: cover;
+ height: 100vh;
  background-position: center;
  padding: 300px 0;
  margin-top: 20px;
@@ -31,6 +32,7 @@
 
 .btn-ghost {
   color: white;
+  background-color: black;
   border: 1px solid white;
   padding: 8px 24px;
   border-radius: 50px;
