@@ -3,22 +3,26 @@
   <p>Owned by user: <%= mom.owner.name %></p>
   <p></p>
   <!-- Trigger the modal with a button -->
-  <%= render '/moms/show-mom-modal', mom: mom %>
+  <%= render '/moms/show-mom-modal', mom: mom%>
 
   <p></p>
   <p></p>
 <% end %>
 
-<div class="col-lg-6" id="mom-card">
+
+<div class="modal fade col-lg-3" id="mom-card">
   <div id="owner-avatar">
     <!-- PICTURE OF USER -->
   </div>
   <div id="back-card">
-    <div id="mom-picture">
+    <div id="mom-picture-card">
       <!-- PICTURE OF MOM -->
+      MOM PIC
+      <h2 id="mom-picture-card-name">MOM NAME</h2>
     </div>
     <div id="bottom-card">
-      <%= link_to "See More"  %>
+      MOM DESCRIPTION
+      <button id="See More">CLICK</button>
     </div>
   </div>
 </div>
