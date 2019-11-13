@@ -1,8 +1,12 @@
 <div class="banner">
  <div class="container">
-   <h1> MammaMia</h1>
-   <p>Find a mom who cares about you anywhere, everywhere.</p>
-   <a class="btn btn-ghost" href="#">Register</a>
+  <h1> MammaMia</h1>
+  <p>Find a mom who cares about you anywhere, everywhere.</p>
+  <% if current_user.nil? %>
+    <%= link_to "Register",new_user_session_path, class: "btn btn-ghost" %>
+  <% else %>
+    <%= link_to "Go To Your Dashboard (Make bigger/more visible)",dashboard_path, class: "btn btn-ghost" %>
+  <% end %>
  </div>
 </div>
 <br>

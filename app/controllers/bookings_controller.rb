@@ -18,10 +18,9 @@ class BookingsController < ApplicationController
     @booking.renter = current_user
     @booking.price = @mom.price
     if @booking.save
-      redirect_to mom_path(@mom)
+      redirect_to moms_path
     else
-      raise
-      render template: "moms/show"
+      render template: "moms"
     end
 
     # to do : add redirect after booking creation to correct view path
