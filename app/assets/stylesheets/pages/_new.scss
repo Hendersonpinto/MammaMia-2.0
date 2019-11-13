@@ -1,0 +1,38 @@
+.signupform {
+  // background-color: red;
+// margin-top: 200px;
+padding-top: 200px;
+
+}
+
+.backimage {
+// background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)), asset-url('banner.jpg');
+height: 100vh;
+background-color: white;
+}
+
+.inputarea {
+border: solid;
+// border-color: #92a8d1;
+// border-color: #beebe9;
+border-color: #ffe3ed;
+background-color: rgba(255, 226, 226, 0.2);
+// opacity:0.2;
+border-radius: 5px;
+position: relative;
+
+padding: 40px;
+}
+
+
+.avatarlogo {
+position: absolute;
+top:20px;
+right:20px;
+// width:30px;
+}
+
+.avatarlogo img {
+  width:40px;
+  border-radius:50%;
+}
