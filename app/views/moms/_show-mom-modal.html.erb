@@ -1,0 +1,27 @@
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#momShowDiv">See Mom</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="momShowDiv" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content" id="modal-div">
+        <div class="modal-body">
+          <h4 class="modal-title" id="mom-modal-name"><%= mom.name %></h4>
+          <!-- CONTENT -->
+          <div class="separ" id="mom-info"></div>
+            <div id='modalpic'>PICTURE</div>
+            <div><p>LOCATION: <%= mom.location %></p></div>
+            <div><p>OWNED BY: <%= mom.owner.name %></p></div>
+            <%= simple_form_for [mom, @booking] do |f| %>
+              <%= f.input :start_date %>
+              <%= f.input :end_date %>
+              <%= f.submit "Create", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+          <!-- END CONTENT -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
