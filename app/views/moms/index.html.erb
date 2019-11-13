@@ -1,10 +1,10 @@
 <% @moms.each do |mom| %>
   <h2><%= mom.name %></h2>
   <p>Owned by user: <%= mom.owner.name %></p>
-  <%= link_to 'See Mom', mom_path(mom) %>
   <p></p>
   <!-- Trigger the modal with a button -->
   <%= render '/moms/show-mom-modal', mom: mom %>
 
-
+  <p></p>
+  <p></p>
 <% end %>

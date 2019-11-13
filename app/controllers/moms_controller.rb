@@ -5,11 +5,6 @@ class MomsController < ApplicationController
     @booking = Booking.new
   end
 
-  def show
-    @mom = Mom.find(params[:id])
-    @booking = Booking.new
-  end
-
   def new
     @mom = Mom.new
   end
