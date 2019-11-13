@@ -1,2 +1,14 @@
+
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+<%= link_to "DASHBOARD", dashboard_path %>
+<p></p>
+<%= '-'*50 %>
+<p></p>
+<% if current_user.nil? %>
+  <%= link_to "SIGN IN", new_user_session_path %>
+<% else %>
+  <p>USER ALREADE SIGNED IN, WELCOME <b><%= current_user.name.capitalize %></b></p>
+<% end %>
 <%= render '/shared/banner' %>
 <%= render '/shared/how-it-works' %>
