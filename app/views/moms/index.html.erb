@@ -3,4 +3,8 @@
   <p>Owned by user: <%= mom.owner.name %></p>
   <%= link_to 'See Mom', mom_path(mom) %>
   <p></p>
+  <!-- Trigger the modal with a button -->
+  <%= render '/moms/show-mom-modal', mom: mom %>
+
+
 <% end %>

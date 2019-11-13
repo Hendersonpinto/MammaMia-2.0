@@ -2,6 +2,7 @@ class MomsController < ApplicationController
 
   def index
     @moms = Mom.all
+    @booking = Booking.new
   end
 
   def show
