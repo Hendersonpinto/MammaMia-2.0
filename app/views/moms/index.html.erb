@@ -1,9 +1,8 @@
 <div id="mom-card-container">
-<% @moms.each do |mom| %>
-  <%= render '/moms/mom-card', mom: mom %>
-<% end %>
+
+  <%= render 'mom-card', moms: @moms %>
 </div>
 
 <% @moms.each do |mom| %>
-  <%= render '/moms/show-mom-modal', mom: mom%>
+  <%= render '/moms/show-mom-modal', mom: mom %>
 <% end %>
