@@ -1,0 +1,12 @@
+<div class="createmom container">
+<%= simple_form_for [@mom] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :last_name %>
+  <%= f.input :location %>
+  <%= f.input :price %>
+  <%= f.submit "add a mom", class: "btn btn-primary" %>
+<% end %>
+</div>
+
+
+
