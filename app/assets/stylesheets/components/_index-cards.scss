@@ -1,4 +1,4 @@
-.card {
+#index-card {
   border-radius: 5px;
   border-width: 2px;
   border-style: solid;
@@ -6,28 +6,29 @@
   background: #faeee7;
   opacity: 0.80;
   text-align: left;
+  padding: 0px;
 }
 
-.card h2 {
+#index-card img {
+ height: 150px;
+ margin-bottom: -30px;
+ border-radius: 0px;
+ height: auto;
+}
+
+#index-card h2 {
   font-family: 'Pacifico', cursive;
   font-size: 32px;
   color: #ffb3b4;
+  margin-bottom: -5px;
 }
 
-.card h5 {
+#index-card h5 {
   font-size: 20px;
   color: #656565;
 }
 
-.edit {
-  color: red;
-}
-
-.delete {
-  color: blue;
-}
-
-.card:hover {
+#index-card:hover {
   opacity: 1;
   border-color: #9be3de;
   background: #DEF5F4;
@@ -38,25 +39,6 @@
 
 }
 
-.container {
-   display: flex;
-    justify-content: center;
-    // flex-wrap: wrap;
-}
-
-.card-title a {
-  color: #ffdc34;
-  font-size: 30px;
-  text-align: left;
-}
-
-.links {
-  text-align: right;
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-}
-
 .spacer30 {
   height: 30px;
 }
@@ -65,32 +47,23 @@
   height: 10px;
 }
 
-.card-button {
+#card-button {
   font-family: 'Pacifico', cursive;
   font-size: 20px;
   background: white;
   border-radius: 5px;
-  padding: 10px;
   width: 100%;
   text-align: center;
   opacity: 1;
-  border: 2px dotted white;
-}
-
-.card-button a {
+  border: 3px dotted white;
   color: #ffc6c7;
   text-decoration: none;
 }
 
-.card-button a:hover {
-  color: #ffc6c7;;
-  text-decoration: none;
-}
-
-.card-button:hover {
+#card-button:hover {
   color: #ffc6c7;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.9;
-  border: 2px dotted #ffc6c7;
+  border: 3px dotted #ffc6c7;
 }
