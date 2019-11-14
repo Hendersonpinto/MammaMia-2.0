@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(strong_param)
     @mom = Mom.find(params[:mom_id])
     @booking.mom = @mom
-    @booking.renter = current_user
+    @booking.user = current_user
     @booking.price = @mom.price
     if @booking.save
       redirect_to moms_path

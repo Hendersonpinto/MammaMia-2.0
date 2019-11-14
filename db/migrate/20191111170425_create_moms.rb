@@ -5,7 +5,7 @@ class CreateMoms < ActiveRecord::Migration[5.2]
       t.string :last_name
       t.string :location
       t.integer :price
-      t.references :owner, foreign_key: { to_table: :users}
+      t.references :owner, foreign_key: { to_table: :users }
 
       t.timestamps
     end
