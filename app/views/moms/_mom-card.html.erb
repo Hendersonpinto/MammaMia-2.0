@@ -9,15 +9,13 @@
       <% @moms.each do |mom| %>
         <div id="mom-card" data-toggle="modal" data-target="#myModal<%= mom.name %>">
         <div class="col-4">
-          <div class="card" style="width: 18rem;">
+          <div class="card" id="index-card" style="width: 18rem;">
               <%= cl_image_tag mom.photo, class: "card-img-top" %>
               <div class="card-body">
              <h2><%= mom.name  %></h2>
-             <div class="spacer10"></div>
-               <!-- <h5 class="card-title"><%= mom.owner.name %>'s Mom </h5> -->
                <p><%= mom.bio %></p>
-               <div class="card-button">
-                <%= link_to 'Book this mom', mom_bookings_path(mom), method: :post %>
+               <div id="card-button">
+                <p>Book this mom</p>
               </div>
               </div>
           </div>
