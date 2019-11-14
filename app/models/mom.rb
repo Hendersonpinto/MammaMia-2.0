@@ -6,4 +6,7 @@ class Mom < ApplicationRecord
   validates :name, uniqueness: true, presence: true
   validates :last_name, presence: true
   validates :location, presence: true
+  validates :price, presence: true
+
+  mount_uploader :photo, PhotoUploader
 end
