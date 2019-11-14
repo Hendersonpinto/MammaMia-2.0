@@ -3,7 +3,7 @@
  height: 100vh;
  background-position: center;
  padding: 300px 0;
- margin-top: 20px;
+ margin-top: 0px;
  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)), asset-url('banner.jpg');
  // background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)), url('<%= cl_image_path @article.photo%>;
  background-attachment: fixed;
