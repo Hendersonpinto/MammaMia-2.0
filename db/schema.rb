@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_11_13_151500) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.bigint "renter_id"
+    t.bigint "user_id"
     t.bigint "mom_id"
     t.integer "price"
     t.datetime "created_at", null: false
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_11_13_151500) do
     t.date "start_date"
     t.date "end_date"
     t.index ["mom_id"], name: "index_bookings_on_mom_id"
-    t.index ["renter_id"], name: "index_bookings_on_renter_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "moms", force: :cascade do |t|
@@ -56,6 +56,6 @@ ActiveRecord::Schema.define(version: 2019_11_13_151500) do
   end
 
   add_foreign_key "bookings", "moms"
-  add_foreign_key "bookings", "users", column: "renter_id"
+  add_foreign_key "bookings", "users"
   add_foreign_key "moms", "users", column: "owner_id"
 end
