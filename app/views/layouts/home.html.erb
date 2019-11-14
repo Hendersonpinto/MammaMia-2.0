@@ -11,13 +11,11 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body id="all">
-    <%= render 'shared/navbar' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <span class="notice"><%= notice %></span>
+    <span class="alert"><%= alert %></span>
+    <%= render 'shared/navbar-home' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
 </html>
-
-

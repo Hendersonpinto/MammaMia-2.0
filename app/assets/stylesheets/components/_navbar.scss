@@ -1,8 +1,21 @@
 .navbar-lewagon {
-  display: flex;
+ justify-content: space-between;
+ background: white;
+ border-bottom: solid 1px;
+ border-bottom-color: #ffe3ed;
   justify-content: space-between;
   background: white;
-  align-items: center;
+  border-bottom: solid 1px;
+  border-bottom-color: #ffe3ed;
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+
+}
+
+.transparent-bg {
+  background-color: transparent;
+  border-bottom: 0px;
+  border-bottom-color: transparent;
 }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -19,5 +32,8 @@
 .navbar-mammamia {
   width: 300px;
 }
+.navbar-mammamia h2{
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
 
-
+}
