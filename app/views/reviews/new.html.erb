@@ -1,0 +1,39 @@
+<div>
+<p id="notice"><%= notice %></p>
+
+<div class="backimage">
+  <div class="container", style="margin-top: -90px">
+    <div class="signupform row d-flex justify-content-center">
+      <div class="col-8 inputarea">
+        <h2>Add a review</h2>
+          <%= simple_form_for [@mom, @review] do |f| %>
+            <% if @review.errors.any? %>
+              <div class="errors-container">
+                <ul>
+                  <% @review.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+  <div class="form-inputs">
+    <%= f.input :rating %>
+    <%= f.input :description %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Save", class: "btn btn-primary my-2 my-sm-0 ml-2"%>
+  </div>
+<% end %>
+
+        <div class="avatarlogo">
+        <%= image_tag "logo", alt: "alttext" %>
+      </div>
+</div>
+</div>
+</div>
+</div>
+
+
+

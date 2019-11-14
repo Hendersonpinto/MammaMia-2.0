@@ -27,6 +27,10 @@
           <p>You have no past bookings</p>
         <% else @my_past_bookings.each do |my_booking| %>
               <p>  <%= my_booking.mom.name %> | <%= my_booking.start_date %> </p>
+              <% my_booking.mom.reviews.each do |review| %>
+              <p><%= review.rating  %> | <%= review.description %></p>
+              <% end %>
+              <%= link_to "Add a review", new_mom_review_path(my_booking.mom)   %>
               <% end %>
           <% end %>
       </div>

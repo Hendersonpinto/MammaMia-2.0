@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_13_151500) do
+ActiveRecord::Schema.define(version: 2019_11_14_144739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,15 @@ ActiveRecord::Schema.define(version: 2019_11_13_151500) do
     t.index ["owner_id"], name: "index_moms_on_owner_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.text "description"
+    t.bigint "mom_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["mom_id"], name: "index_reviews_on_mom_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "last_name"
@@ -58,4 +67,5 @@ ActiveRecord::Schema.define(version: 2019_11_13_151500) do
   add_foreign_key "bookings", "moms"
   add_foreign_key "bookings", "users", column: "renter_id"
   add_foreign_key "moms", "users", column: "owner_id"
+  add_foreign_key "reviews", "moms"
 end
