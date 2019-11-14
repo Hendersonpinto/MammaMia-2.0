@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>MammaMia</title>
@@ -10,7 +11,8 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body id="all">
-    <p class="alert"><%= alert %></p>
+    <span class="notice"><%= notice %></span>
+    <span class="alert"><%= alert %></span>
     <%= render 'shared/navbar-home' %>
     <%= yield %>
     <%= render 'shared/footer' %>

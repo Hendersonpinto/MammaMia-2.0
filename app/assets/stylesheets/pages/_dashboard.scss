@@ -1,0 +1,39 @@
+.dashboard {
+  padding-left: 30px;
+  padding-top: 10px;
+  margin-top: 100px;
+}
+
+.current_bookings {
+  border-radius: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #9be3de;
+  background: #DEF5F4;
+  padding: 15px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.past_bookings {
+  border-radius: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ffc6c7;
+  background: #faeee7;
+  padding: 15px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.dashboard h3 {
+  color: #656565;
+}
+
+.dashboard h5 {
+  color: #656565;
+}
+
+.dashboard p {
+  color: #656565;
+}

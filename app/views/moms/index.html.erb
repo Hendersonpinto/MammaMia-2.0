@@ -1,10 +1,9 @@
+<div id="mom-card-container">
 <% @moms.each do |mom| %>
-  <h2><%= mom.name %></h2>
-  <p>Owned by user: <%= mom.owner.name %></p>
-  <p></p>
-  <!-- Trigger the modal with a button -->
-  <%= render '/moms/show-mom-modal', mom: mom %>
+  <%= render '/moms/mom-card', mom: mom %>
+<% end %>
+</div>
 
-  <p></p>
-  <p></p>
+<% @moms.each do |mom| %>
+  <%= render '/moms/show-mom-modal', mom: mom%>
 <% end %>

@@ -1,4 +1,5 @@
 class MomsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
 
   def index
     @moms = Mom.all
@@ -11,7 +12,12 @@ class MomsController < ApplicationController
 
   def create
     @mom = Mom.new(strong_param)
-    @mom.save
+    @mom.owner = current_user
+    if @mom.save
+      redirect_to moms_path
+    else
+      render :new
+    end
     # to do : add redirect after mom creation to correct view path
     # redirect_to team_path(@mom)
     # render :new
