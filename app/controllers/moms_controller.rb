@@ -26,7 +26,7 @@ class MomsController < ApplicationController
       "
       @moms = Mom.joins(:owner).where(sql_query, query: "%#{params[:query]}%")
     else
-      @moms = Mom.all
+    @moms = Mom.where(supermom:false)
 
       if params[:query].present?
         sql_query = " \
@@ -39,7 +39,7 @@ class MomsController < ApplicationController
         "
         @moms = Mom.joins(:owner).where(sql_query, query: "%#{params[:query]}%")
       else
-        @moms = Mom.all
+    @moms = Mom.where(supermom:false)
 
       end
   end
