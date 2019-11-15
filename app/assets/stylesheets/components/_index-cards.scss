@@ -1,3 +1,20 @@
+.search-bar {
+  height: 60px;
+}
+
+.search-form {
+  display: inline-flex;
+  margin-bottom: 10px;
+  position: absolute;
+  right: 30px;
+}
+
+.form-control {
+  width: 300px;
+  height: 46px;
+  margin-right: 10px;
+}
+
 #index-card {
   border-radius: 5px;
   border-width: 2px;

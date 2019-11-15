@@ -2,7 +2,25 @@
 <p id="notice"><%= notice %></p>
 <div class="spacer30"></div>
 <div class="spacer30"></div>
+
 <div class="container">
+
+  <div class="search-bar">
+  <div class="search-form row">
+    <div class="form-input">
+  <%= form_tag moms_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a mom"
+  %>
+</div>
+<div class="form-button">
+  <%= submit_tag "Search", class: "btn create-button" %>
+</div>
+<% end %>
+ </div>
+</div>
 
   <div class="row">
     <div class="card-columns">

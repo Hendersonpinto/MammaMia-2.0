@@ -20,10 +20,6 @@
 
           <% range_id_start = "range-start-#{mom.id}" %>
           <% range_id_end = "range-end-#{mom.id}" %>
-          <script>
-            console.log("<%= range_id_start %>");
-            console.log("<%= range_id_end %>");
-          </script>
 
           <%= simple_form_for [mom, @booking] do |f| %>
             <%= f.input :start_date, as: :string, required: true, input_html: { id: range_id_start, placeholder: "Select Date.." } %>
@@ -32,8 +28,6 @@
           <% end %>
 
           <script>
-            console.log("#range-start-<%= mom.id %>");
-            console.log("#range-end-<%= mom.id %>");
             flatpickr("#range-start-<%= mom.id %>", {
               altInput: true,
               plugins: [new rangePlugin({ input: "#range-end-<%= mom.id %>"})],
