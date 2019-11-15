@@ -88,7 +88,8 @@ mom2 = Mom.new(
   location: Faker::Address.full_address,
   bio: "Let's listen to Ramones and down some beers",
   price: Faker::Number.within(range: 50..100),
-  owner: marcus
+  owner: marcus,
+  supermom: true,
 )
 mom2.remote_photo_url = "http://www.chilloutpoint.com/images/2010/08/the-oldest-dj-in-the-world/the-oldest-dj-in-the-world-02.jpg"
 mom2.save!

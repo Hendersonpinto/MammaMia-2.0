@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_14_144739) do
+ActiveRecord::Schema.define(version: 2019_11_15_104320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.bigint "renter_id"
+    t.bigint "user_id"
     t.bigint "mom_id"
     t.integer "price"
     t.datetime "created_at", null: false
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_11_14_144739) do
     t.date "start_date"
     t.date "end_date"
     t.index ["mom_id"], name: "index_bookings_on_mom_id"
-    t.index ["renter_id"], name: "index_bookings_on_renter_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "moms", force: :cascade do |t|
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_11_14_144739) do
     t.datetime "updated_at", null: false
     t.string "photo"
     t.text "bio"
+    t.boolean "supermom", default: false
     t.index ["owner_id"], name: "index_moms_on_owner_id"
   end
 
@@ -65,7 +66,7 @@ ActiveRecord::Schema.define(version: 2019_11_14_144739) do
   end
 
   add_foreign_key "bookings", "moms"
-  add_foreign_key "bookings", "users", column: "renter_id"
+  add_foreign_key "bookings", "users"
   add_foreign_key "moms", "users", column: "owner_id"
   add_foreign_key "reviews", "moms"
 end

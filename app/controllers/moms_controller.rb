@@ -2,12 +2,22 @@ class MomsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @moms = Mom.all
+    @moms = Mom.where(supermom:false)
     @booking = Booking.new
   end
 
   def new
     @mom = Mom.new
+  end
+
+  def supermom_home
+    @booking = Booking.new
+
+  end
+
+  def supermoms
+    @supermoms = Mom.where(supermom: true)
+    @booking = Booking.new
   end
 
   def create
