@@ -29,6 +29,7 @@ class MomsController < ApplicationController
 
     end
   end
+end
 
   def new
     @mom = Mom.new
