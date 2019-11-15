@@ -16,6 +16,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem 'faker'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 
 gem 'geocoder'
 

@@ -1,0 +1,9 @@
+<div id="mysuperdiv">
+<div id="mom-card-container">
+  <%= render 'supermom-card', moms: @supermoms %>
+</div>
+
+<% @supermoms.each do |supermom| %>
+  <%= render '/moms/show-mom-modal', mom: supermom %>
+<% end %>
+</div>

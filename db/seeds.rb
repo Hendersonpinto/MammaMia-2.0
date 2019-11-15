@@ -90,6 +90,8 @@ mom2 = Mom.new(
   location: Faker::Address.full_address,
   bio: "Let's listen to Ramones and down some beers",
   price: Faker::Number.within(range: 50..100),
+  owner: marcus,
+  supermom: true,
   latitude: 55.683049,
   longitude: 12.562305,
   owner: marcus
