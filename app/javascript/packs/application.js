@@ -10,3 +10,6 @@ import { initMapbox } from '../plugins/init_mapbox';
 initMapbox();
 
 import "../plugins/flatpickr"
+
+import "../plugins/flatpickr";
+import "../packs/flying-mom";
