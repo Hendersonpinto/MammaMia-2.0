@@ -25,7 +25,7 @@ function momTimeoutFunction(){
 
 function timeoutFunction(){
   setInterval(function () {
-    if (getRndInteger(1, 4) === 1) {
+    if (getRndInteger(1, 8) === 1) {
       console.log("FLYING MOM INCOMING");
       momTimeoutFunction();
     }
