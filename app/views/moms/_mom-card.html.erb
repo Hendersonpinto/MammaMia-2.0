@@ -12,11 +12,11 @@
           <div class="card" id="index-card" style="width: 18rem;">
               <%= cl_image_tag mom.photo, class: "card-img-top" %>
               <div class="card-body">
-             <h2><%= mom.name  %></h2>
+               <h2><%= mom.name  %></h2>
                <p><%= mom.bio %></p>
-               <div id="card-button">
-                <p>Book this mom</p>
-              </div>
+               <div id="price-btn">
+               <h3 id="card-button">Book this mom for <span id="price">€<%= mom.price %></span></h3>
+               </div>
               </div>
           </div>
         </div>
