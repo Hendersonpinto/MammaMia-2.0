@@ -109,7 +109,7 @@ mom3 = Mom.new(
 mom3.remote_photo_url = "https://piximus.net/media/26022/gangster-grandmas-42.jpg"
 mom3.save!
 mom4 = Mom.new(
-  name: 'Marla',
+  name: 'Suzan',
   last_name: Faker::Name.last_name,
   location: Faker::Address.full_address,
   bio: "Let's go for a walk around Christiania.",
@@ -175,28 +175,28 @@ booking_juliana = Booking.new(
  start_date: Date.today + 2.days
  )
 
-booking_marcus = Booking.new(
+booking_1 = Booking.new(
  user: marcus,
  mom: mom1,
  price: Faker::Number.within(range: 100..500),
  start_date: Date.today - 1.days
  )
 
-booking_henderson = Booking.new(
+booking_2 = Booking.new(
  user: henderson,
  mom: mom3,
  price: Faker::Number.within(range: 100..500),
  start_date: Date.today - 2.days
  )
 
-booking_rasmus = Booking.new(
+booking_3 = Booking.new(
  user: rasmus,
  mom: mom2,
  price: Faker::Number.within(range: 100..500),
  start_date: Date.today - 3.days
  )
 
-booking_juliana = Booking.new(
+booking_4 = Booking.new(
  user: juliana,
  mom: mom5,
  price: Faker::Number.within(range: 100..500),
