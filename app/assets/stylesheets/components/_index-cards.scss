@@ -1,3 +1,20 @@
+.search-bar {
+  height: 60px;
+}
+
+.search-form {
+  display: inline-flex;
+  margin-bottom: 10px;
+  position: absolute;
+  right: 30px;
+}
+
+.form-control {
+  width: 300px;
+  height: 46px;
+  margin-right: 10px;
+}
+
 #index-card {
   border-radius: 5px;
   border-width: 2px;
@@ -12,8 +29,12 @@
 #index-card img {
  height: 150px;
  margin-bottom: -30px;
- border-radius: 0px;
+ border-radius: 5px;
  height: auto;
+}
+
+#index-card i {
+  font-size: 24px;
 }
 
 #index-card h2 {
@@ -34,9 +55,14 @@
   background: #DEF5F4;
 }
 
+#price {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 24px;
+  color: #ffb3b4;
+}
+
 .card-columns {
   vertical-align: top;
-
 }
 
 .spacer30 {
@@ -57,6 +83,7 @@
   opacity: 1;
   border: 3px dotted white;
   color: #ffc6c7;
+  padding: 5px;
   text-decoration: none;
 }
 

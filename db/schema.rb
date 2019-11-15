@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2019_11_15_104320) do
     t.string "photo"
     t.text "bio"
     t.boolean "supermom", default: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["owner_id"], name: "index_moms_on_owner_id"
   end
 

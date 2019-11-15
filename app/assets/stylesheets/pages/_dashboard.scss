@@ -1,3 +1,10 @@
+.dash-container {
+  height: 100vh;
+  background-image: url('https://media.giphy.com/media/YmV3LrUGflTaM/giphy.gif');
+  background-size: cover;
+  opacity: 0.8;
+}
+
 .dashboard {
   padding-left: 30px;
   padding-top: 10px;
@@ -16,6 +23,12 @@
   margin-right: 15px;
 }
 
+.links {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
 .user_bookings {
   border-radius: 15px;
   border-width: 2px;
@@ -24,7 +37,6 @@
   background: #DEF5F4;
   padding: 15px;
   margin-left: 15px;
-  margin-bottom: 15px;
 }
 
 .mom_bookings {
@@ -35,11 +47,13 @@
   background: #faeee7;
   padding: 15px;
   margin-left: 15px;
-  margin-bottom: 15px;
 }
 
 .dashboard h3 {
+  font-family: 'Pacifico', cursive;
+  font-size: 28px;
   color: #656565;
+  margin-bottom: 15px;
 }
 
 .dashboard h5 {
@@ -57,7 +71,7 @@
   border-radius: 5px;
   text-align: center;
   opacity: 1;
-  border: 3px dotted white;
+  border: 2px solid #ffc6c7;
   color: #ffc6c7;
   text-decoration: none;
 }
@@ -67,7 +81,7 @@
   text-decoration: none;
   cursor: pointer;
   opacity: 0.9;
-  border: 3px dotted #ffc6c7;
+  border: 2px dotted #ffc6c7;
 }
 
 .btn.edit-button {
@@ -77,15 +91,35 @@
   border-radius: 5px;
   text-align: center;
   opacity: 1;
-  border: 3px dotted white;
-  color: #ffc6c7;
+  border: 2px solid #9be3de;
+  color: #9be3de;
   text-decoration: none;
 }
 
 .btn.edit-button:hover {
-  color: #ffc6c7;
+  color: #9be3de;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.9;
-  border: 3px dotted #ffc6c7;
+  border: 2px dotted #9be3de;
+}
+
+.btn.signout-button {
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  background: white;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 1;
+  border: 2px solid #ffe74d;
+  color: #ffe74d;
+  text-decoration: none;
+}
+
+.btn.signout-button:hover {
+  color: #ffe74d;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.9;
+  border: 2px dotted #ffe74d;
 }

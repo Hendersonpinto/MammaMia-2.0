@@ -1,8 +1,16 @@
 <div id="mom-card-container">
-
-  <%= render 'mom-card', moms: @moms %>
+  <%= render 'mom-card', mom: @moms %>
 </div>
 
 <% @moms.each do |mom| %>
   <%= render '/moms/show-mom-modal', mom: mom %>
 <% end %>
+
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+

@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr@latest/dist/plugins/rangePlugin.js"></script>
+<link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+
   <!-- Modal -->
 <div class="modal fade" role="dialog" id="myModal<%= mom.name %>">
   <div class="modal-dialog">
@@ -12,11 +17,24 @@
           <div id='modalpic'>PICTURE</div>
           <div><p>LOCATION: <%= mom.location %></p></div>
           <div><p>OWNED BY: <%= mom.owner.name %></p></div>
+
+          <% range_id_start = "range-start-#{mom.id}" %>
+          <% range_id_end = "range-end-#{mom.id}" %>
+
           <%= simple_form_for [mom, @booking] do |f| %>
-            <%= f.input :start_date %>
-            <%= f.input :end_date %>
+            <%= f.input :start_date, as: :string, required: true, input_html: { id: range_id_start, placeholder: "Select Date.." } %>
+            <%= f.input :end_date, as: :string, required: true, input_html: { id: range_id_end, placeholder: "Select Date.." } %>
             <%= f.submit "Create", class: "btn btn-primary" %>
           <% end %>
+
+          <script>
+            flatpickr("#range-start-<%= mom.id %>", {
+              altInput: true,
+              plugins: [new rangePlugin({ input: "#range-end-<%= mom.id %>"})],
+              minDate: "today"
+            });
+          </script>
+
         </div>
         <!-- END INNER CONTENT -->
       </div>

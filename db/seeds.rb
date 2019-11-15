@@ -78,6 +78,8 @@ mom1 = Mom.new(
   location: Faker::Address.full_address,
   bio: "I'm the perfect mom - I won't really see anything wrong you do",
   price: Faker::Number.within(range: 50..100),
+  latitude: 55.685365,
+  longitude: 12.546960,
   owner: henderson
 )
 mom1.remote_photo_url = "https://rbbcommunications.com/wp-content/uploads/2018/12/Abuela.jpg"
@@ -90,6 +92,9 @@ mom2 = Mom.new(
   price: Faker::Number.within(range: 50..100),
   owner: marcus,
   supermom: true,
+  latitude: 55.683049,
+  longitude: 12.562305,
+  owner: marcus
 )
 mom2.remote_photo_url = "http://www.chilloutpoint.com/images/2010/08/the-oldest-dj-in-the-world/the-oldest-dj-in-the-world-02.jpg"
 mom2.save!
@@ -99,16 +104,20 @@ mom3 = Mom.new(
   location: Faker::Address.full_address,
   bio: "Who's that c*nt that said you're ugly? I'll find him and kill him.",
   price: Faker::Number.within(range: 50..100),
+  latitude: 55.691702,
+  longitude: 12.587497,
   owner: rasmus
 )
 mom3.remote_photo_url = "https://piximus.net/media/26022/gangster-grandmas-42.jpg"
 mom3.save!
 mom4 = Mom.new(
-  name: 'Marla',
+  name: 'Suzan',
   last_name: Faker::Name.last_name,
   location: Faker::Address.full_address,
   bio: "Let's go for a walk around Christiania.",
   price: Faker::Number.within(range: 50..100),
+  latitude: 55.378976,
+  longitude: 11.742571,
   owner: juliana
 )
 mom4.remote_photo_url = "http://25.media.tumblr.com/tumblr_m2dtn832eA1qcxcu3o1_500.jpg"
@@ -119,6 +128,8 @@ mom5 = Mom.new(
   location: Faker::Address.full_address,
   bio: "I can help you with your Le Wagon challenges",
   price: Faker::Number.within(range: 50..100),
+  latitude: 57.033219,
+  longitude: 10.013200,
   owner: second_user
 )
 mom5.remote_photo_url = "https://cdn.aarp.net/content/dam/aarp/work/working_retirement/2018/02/1140-82-year-old-programmer-masako-wakamiya.imgcache.revb1513d0bd11318c0698969e7455b397a.jpg"
@@ -129,6 +140,8 @@ mom6 = Mom.new(
   location: Faker::Address.full_address,
   bio: "I'll make you a lot of cakes until you look healthier, you haven't been eating. I know.",
   price: Faker::Number.within(range: 50..100),
+  latitude: 57.700153,
+  longitude: 11.965562,
   owner: third_user
 )
 mom6.remote_photo_url = "https://grist.files.wordpress.com/2008/07/grandma-cooking_h528.jpg"
@@ -164,28 +177,28 @@ booking_juliana = Booking.new(
  start_date: Date.today + 2.days
  )
 
-booking_marcus = Booking.new(
+booking_1 = Booking.new(
  user: marcus,
  mom: mom1,
  price: Faker::Number.within(range: 100..500),
  start_date: Date.today - 1.days
  )
 
-booking_henderson = Booking.new(
+booking_2 = Booking.new(
  user: henderson,
  mom: mom3,
  price: Faker::Number.within(range: 100..500),
  start_date: Date.today - 2.days
  )
 
-booking_rasmus = Booking.new(
+booking_3 = Booking.new(
  user: rasmus,
  mom: mom2,
  price: Faker::Number.within(range: 100..500),
  start_date: Date.today - 3.days
  )
 
-booking_juliana = Booking.new(
+booking_4 = Booking.new(
  user: juliana,
  mom: mom5,
  price: Faker::Number.within(range: 100..500),

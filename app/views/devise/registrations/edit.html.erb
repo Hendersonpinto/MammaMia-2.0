@@ -1,3 +1,8 @@
+<div class="backimage">
+  <div class="container", style="margin-top: -90px">
+    <div class="signupform row d-flex justify-content-center">
+      <div class="col-8 inputarea">
+
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -24,12 +29,17 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <%= f.button :submit, "Update", class: "btn create-button" %>
   </div>
 <% end %>
+<div class="spacer10"></div>
 
-<h3>Cancel my account</h3>
-
+<%= link_to "Return to dashboard", :back, class: "btn create-button" %>
+<div class="spacer10"></div>
 <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+
+</div>
+</div>
+</div>
+
