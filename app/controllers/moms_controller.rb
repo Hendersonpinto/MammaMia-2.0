@@ -4,6 +4,17 @@ class MomsController < ApplicationController
   def index
     @moms = Mom.all
     @booking = Booking.new
+
+    @geomoms = Mom.geocoded #returns moms with coordinates
+
+    @markers = @geomoms.map do |mom|
+      {
+        lat: mom.latitude,
+        lng: mom.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { mom: mom }),
+        image_url: helpers.asset_url('logo.jpg')
+      }
+    end
   end
 
   def new
