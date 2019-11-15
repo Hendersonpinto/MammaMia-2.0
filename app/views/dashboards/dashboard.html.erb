@@ -7,9 +7,11 @@
     <h3>  <%= current_user.name %> <%= current_user.last_name %> </h3>
     <h5>  <i class="far fa-heart"></i> <%= current_user.mom.name %> <%= current_user.mom.last_name %> </h5>
   </div>
+  <div class="links">
     <p><%= link_to 'Create mom',  new_mom_path, class: "btn create-button" %></p>
-    <p><%= link_to 'Edit profile',  edit_user_registration_path, class: "btn create-button" %></p>
-    <p><%= link_to 'Sign Out',  destroy_user_session_path, :method => :delete, class: "btn edit-button" %></p>
+    <p><%= link_to 'Edit profile',  edit_user_registration_path, class: "btn edit-button" %></p>
+    <p><%= link_to 'Sign Out',  destroy_user_session_path, :method => :delete, class: "btn signout-button" %></p>
+  </div>
 </div>
 
   <div class="bookings row">
