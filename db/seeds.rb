@@ -206,24 +206,3 @@ booking_4 = Booking.new(
  )
 
 puts 'finishing up'
-
-
-# 20.times do
-#  mom = Mom.new(
-#    name: Faker::Name.first_name,
-#    last_name: Faker::Name.last_name,
-#    location: Faker::Address.full_address,
-#    price: Faker::Number.within(range: 50..100),
-#    owner: [henderson, rasmus, marcus].sample
-#  )
-#  mom.save!
-# end
-# 10.times do
-#  user = User.new(
-#    name: Faker::Name.first_name,
-#    last_name: Faker::Name.last_name,
-#    location: Faker::Address.full_address,
-#    email: Faker::Internet.email
-#  )
-#  user.save!
-# end
