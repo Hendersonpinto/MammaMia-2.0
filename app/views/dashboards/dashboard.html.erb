@@ -1,10 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<div class=dashboard>
+<div class="dashboard row">
 
   <div class="profile">
-    <h1>  <%= current_user.name %> <%= current_user.last_name %> </h1>
-    <h3>  Listed mom: <%= current_user.mom.name %> <%= current_user.mom.last_name %> </h3>
+    <h3>  <%= current_user.name %> <%= current_user.last_name %> </h3>
+    <h5>  Listed mom: <%= current_user.mom.name %> <%= current_user.mom.last_name %> </h5>
+    <%= link_to 'Create mom',  new_mom_path, class: "btn create-button" %>
+    <%= link_to 'Sign Out',  destroy_user_session_path, :method => :delete, class: "btn edit-button" %>
   </div>
 
   <div class="bookings row">
@@ -12,7 +14,7 @@
     <div class="user_bookings">
       <h3>My bookings:</h3>
       <div class="my_current_bookings">
-        <h5>My bookings</h5>
+        <h5>Current bookings</h5>
         <% if @my_current_bookings.empty? %>
           <p>You have no current bookings</p>
         <% else @my_current_bookings.each do |my_booking| %>
@@ -22,11 +24,15 @@
       </div>
 
        <div class="my_past_bookings">
-        <h5>My bookings</h5>
+        <h5>Past bookings</h5>
         <% if @my_past_bookings.empty? %>
           <p>You have no past bookings</p>
         <% else @my_past_bookings.each do |my_booking| %>
               <p>  <%= my_booking.mom.name %> | <%= my_booking.start_date %> </p>
+              <% my_booking.mom.reviews.each do |review| %>
+              <p><%= review.rating  %> | <%= review.description %></p>
+              <% end %>
+              <%= link_to "Add a review", new_mom_review_path(my_booking.mom)   %>
               <% end %>
           <% end %>
       </div>
@@ -35,7 +41,7 @@
      <div class="mom_bookings">
       <h3>Mom's bookings:</h3>
         <div class="moms_current_bookings">
-          <h5>Mom's bookings</h5>
+          <h5>Current bookings</h5>
           <% if @my_mom_current_bookings.empty? %>
             <p>Your mom has no current bookings</p>
           <% else @my_mom_current_bookings.each do |my_booking| %>
@@ -45,7 +51,7 @@
         </div>
 
       <div class="moms_past_bookings">
-      <h5>Mom's bookings</h5>
+      <h5>Past bookings</h5>
       <% if @my_mom_past_bookings.empty? %>
         <p>Your mom has no past bookings</p>
       <% else @my_mom_past_bookings.each do |my_booking| %>
@@ -55,8 +61,6 @@
       </div>
   </div>
 </div>
-    <%= link_to 'Create mom',  new_mom_path, class: "btn btn-warning" %>
-    <%= link_to 'Sign Out',  destroy_user_session_path, :method => :delete, class: "btn btn-primary" %>
 
 </div>
 </div>

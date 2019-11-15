@@ -1,16 +1,29 @@
-<div id="mom-card" data-toggle="modal" data-target="#myModal<%= mom.name %>">
-  <div id="owner-avatar">
-    <!-- PICTURE OF USER -->
-  </div>
 
-  <div id="back-card">
-    <div id="mom-picture-card">
-      <!-- PICTURE OF MOM -->
-      <img id="mom-picture" src="https://source.unsplash.com/random/500x300" alt="<%= mom.name %>">
-      <h2 id="mom-picture-card-name"><%= mom.name %></h2>
-    </div>
-    <div id="bottom-card">
-      <p><%= mom.owner.name %>'s mom (DESCRIPTION)</p>
+<p id="notice"><%= notice %></p>
+<div class="spacer30"></div>
+<div class="spacer30"></div>
+<div class="container">
+
+  <div class="row">
+    <div class="card-columns">
+      <% @moms.each do |mom| %>
+        <div id="mom-card" data-toggle="modal" data-target="#myModal<%= mom.name %>">
+        <div class="col-4">
+          <div class="card" id="index-card" style="width: 18rem;">
+              <%= cl_image_tag mom.photo, class: "card-img-top" %>
+              <div class="card-body">
+             <h2><%= mom.name  %></h2>
+               <p><%= mom.bio %></p>
+               <div id="card-button">
+                <p>Book this mom</p>
+              </div>
+              </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
+</div>
+
+
 </div>
