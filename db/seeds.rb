@@ -94,7 +94,6 @@ mom2 = Mom.new(
   supermom: true,
   latitude: 55.683049,
   longitude: 12.562305,
-  owner: marcus
 )
 mom2.remote_photo_url = "http://www.chilloutpoint.com/images/2010/08/the-oldest-dj-in-the-world/the-oldest-dj-in-the-world-02.jpg"
 mom2.save!
@@ -205,4 +204,111 @@ booking_4 = Booking.new(
  start_date: Date.today - 4.days
  )
 
+puts 'creating supermoms'
+supermom1 = Mom.new(
+  name: 'Ann Marie',
+  last_name: Faker::Name.last_name,
+  location: Faker::Address.full_address,
+  bio: "The wildest",
+  price: Faker::Number.within(range: 50..100),
+  owner: marcus,
+  supermom: true,
+  latitude: 55.683049,
+  longitude: 12.562305,
+  owner: marcus
+)
+supermom1.remote_photo_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqPzWU-ta_rzHs28dqn3JGiFVL1f-tSk7bqoQno-6GUDBFX8In2A&s"
+supermom1.save!
+
+supermom2 = Mom.new(
+  name: 'Rachel',
+  last_name: Faker::Name.last_name,
+  location: Faker::Address.full_address,
+  bio: "The wildest",
+  price: Faker::Number.within(range: 50..100),
+  supermom: true,
+  latitude: 55.683049,
+  longitude: 12.562305,
+  owner: first_user,
+)
+supermom2.remote_photo_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhHY6MI3wHalIH7KBROihhAGqP0xP3cgwFTUEj4K8SUexE_Xgr&s"
+supermom2.save!
+
+supermom3 = Mom.new(
+  name: 'Linn',
+  last_name: Faker::Name.last_name,
+  location: Faker::Address.full_address,
+  bio: "The wildest",
+  price: Faker::Number.within(range: 50..100),
+  supermom: true,
+  latitude: 55.683049,
+  longitude: 12.562305,
+  owner: second_user,
+)
+supermom3.remote_photo_url = "https://blog.stylewe.com/wp-content/uploads/2017/03/17076801_415832952083573_2792137545977167872_n.jpg"
+supermom3.save!
+
+supermom4 = Mom.new(
+  name: 'Eva',
+  last_name: Faker::Name.last_name,
+  location: Faker::Address.full_address,
+  bio: "The wildest",
+  price: Faker::Number.within(range: 50..100),
+  supermom: true,
+  latitude: 55.683049,
+  longitude: 12.562305,
+  owner: third_user,
+)
+supermom4.remote_photo_url = "https://i.pinimg.com/originals/4b/e2/d7/4be2d75e63dac0e5b3988a58cf72bd32.jpg"
+supermom4.save!
+
+supermom5= Mom.new(
+  name: 'Cristina',
+  last_name: Faker::Name.last_name,
+  location: Faker::Address.full_address,
+  bio: "The wildest",
+  price: Faker::Number.within(range: 50..100),
+  supermom: true,
+  latitude: 55.683049,
+  longitude: 12.562305,
+  owner: second_user,
+)
+supermom5.remote_photo_url = "https://i.dailymail.co.uk/i/newpix/2018/10/25/06/519DA9F900000578-0-image-a-1_1540444423608.jpg"
+supermom5.save!
+
+supermom6 = Mom.new(
+  name: 'Hannah',
+  last_name: Faker::Name.last_name,
+  location: Faker::Address.full_address,
+  bio: "The wildest",
+  price: Faker::Number.within(range: 50..100),
+  supermom: true,
+  latitude: 55.683049,
+  longitude: 12.562305,
+  owner: second_user,
+)
+supermom6.remote_photo_url ="https://external-preview.redd.it/UJgYENaZehCsb6PLIOalxcsE-rZt2jxDg2Am9szSE9U.jpg?auto=webp&s=978258e66e38f0492d19a5db66726286c2bf2146"
+supermom6.save!
+
 puts 'finishing up'
+
+
+# 20.times do
+#  mom = Mom.new(
+#    name: Faker::Name.first_name,
+#    last_name: Faker::Name.last_name,
+#    location: Faker::Address.full_address,
+#    price: Faker::Number.within(range: 50..100),
+#    owner: [henderson, rasmus, marcus].sample
+#  )
+#  mom.save!
+# end
+# 10.times do
+#  user = User.new(
+#    name: Faker::Name.first_name,
+#    last_name: Faker::Name.last_name,
+#    location: Faker::Address.full_address,
+#    email: Faker::Internet.email
+#  )
+#  user.save!
+# end
