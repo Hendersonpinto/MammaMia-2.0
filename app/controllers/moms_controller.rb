@@ -14,7 +14,7 @@ class MomsController < ApplicationController
         image_url: helpers.asset_url('logo.jpg')
       }
     end
-    
+
     if params[:query].present?
       sql_query = " \
         moms.name @@ :query \
@@ -27,7 +27,7 @@ class MomsController < ApplicationController
       @moms = Mom.joins(:owner).where(sql_query, query: "%#{params[:query]}%")
     else
       @moms = Mom.all
-      
+
       if params[:query].present?
         sql_query = " \
           moms.name @@ :query \
