@@ -1,3 +1,10 @@
+.dash-container {
+  height: 80vh;
+  background-image: url('https://media.giphy.com/media/YmV3LrUGflTaM/giphy.gif');
+  background-size: cover;
+  opacity: 0.8;
+}
+
 .dashboard {
   padding-left: 30px;
   padding-top: 10px;
@@ -24,7 +31,6 @@
   background: #DEF5F4;
   padding: 15px;
   margin-left: 15px;
-  margin-bottom: 15px;
 }
 
 .mom_bookings {
@@ -35,7 +41,6 @@
   background: #faeee7;
   padding: 15px;
   margin-left: 15px;
-  margin-bottom: 15px;
 }
 
 .dashboard h3 {
