@@ -13,7 +13,7 @@ function momTimeoutFunction(){
   setRandLine();
   let i = 0;
   const inter = setInterval(function () {
-    i += 10;
+    i += 3;
     flyingMom.style.left = (i-220) + "px";
     flyingMom.style.bottom =  getBottomOffset(i) + "px";
     if (i > (curWidth)) {
@@ -25,7 +25,7 @@ function momTimeoutFunction(){
 
 function timeoutFunction(){
   setInterval(function () {
-    if (getRndInteger(1, 8) === 1) {
+    if (getRndInteger(1, 7) === 1) {
       console.log("FLYING MOM INCOMING");
       momTimeoutFunction();
     }
