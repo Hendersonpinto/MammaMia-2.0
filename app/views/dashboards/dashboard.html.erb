@@ -5,12 +5,20 @@
 
 <div>
   <div class="profile">
-    <h3>  <%= current_user.name %> <%= current_user.last_name %> </h3>
+    <p> <%= current_user.name %> <%= current_user.last_name %></p>
+    <% if current_user.mom %>
     <h5>  <i class="far fa-heart"></i> <%= current_user.mom.name %> <%= current_user.mom.last_name %> </h5>
+    <% else %>
+    <h5>  <i class="far fa-heart"></i> You haven't registered your own mom yet. </h5>
+    <% end %>
   </div>
   <div class="links">
-    <p><%= link_to 'Create mom',  new_mom_path, class: "btn create-button" %></p>
-    <p><%= link_to 'Edit profile',  edit_user_registration_path, class: "btn edit-button" %></p>
+    <% if current_user.mom %>
+    <p><%= link_to "Edit my own mom's profile",  edit_mom_path(current_user.mom), class: "btn create-button" %></p>
+    <% else %>
+    <p><%= link_to 'Register my own mom',  new_mom_path, class: "btn create-button" %></p>
+    <% end %>
+    <p><%= link_to 'Edit my profile',  edit_user_registration_path, class: "btn edit-button" %></p>
     <p><%= link_to 'Sign Out',  destroy_user_session_path, :method => :delete, class: "btn signout-button" %></p>
   </div>
 </div>

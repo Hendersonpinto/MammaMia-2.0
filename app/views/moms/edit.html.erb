@@ -1,0 +1,40 @@
+<div>
+  <p id="notice"><%= notice %></p>
+
+<div class="backimage">
+  <div class="container", style="margin-top: -90px">
+    <div class="signupform row d-flex justify-content-center">
+      <div class="col-8 inputarea">
+        <h2>Edit your own mom</h2>
+          <%= simple_form_for(@mom) do |f| %>
+            <% if @mom.errors.any? %>
+              <div class="errors-container">
+                <ul>
+                  <% @mom.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :last_name %>
+    <%= f.input :bio %>
+    <%= f.input :location %>
+    <%= f.input :price %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Save", class: "btn create-button"%>
+  </div>
+<% end %>
+        <div class="avatarlogo">
+        <%= image_tag "logo.jpg", alt: "alttext" %>
+      </div>
+    </div>
+
+
+
