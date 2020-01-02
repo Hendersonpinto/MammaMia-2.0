@@ -8,12 +8,12 @@
     <p> <%= current_user.name.capitalize %> <%= current_user.last_name.capitalize %></p>
     <% if current_user.mom %>
     <h5>  <i class="far fa-heart"></i> <%= current_user.mom.name.capitalize %> <%= current_user.mom.last_name.capitalize %> </h5>
-    <% else %>
-    <h5>  <i class="far fa-heart"></i> You haven't registered your own mom yet. </h5>
-    <% end %>
     <div class="img-dash-div">
     <%= cl_image_tag current_user.mom.photo, class: "img-dash" %>
     </div>
+    <% else %>
+    <h5>  <i class="far fa-heart"></i> You haven't registered your own mom yet. </h5>
+    <% end %>
   </div>
   <div class="links">
     <% if current_user.mom %>
